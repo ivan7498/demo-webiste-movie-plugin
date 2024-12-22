@@ -1,0 +1,31 @@
+Opis dodatka
+
+Ovaj dodatak za WordPress implementira funkcionalnosti vezane za upravljanje sadržajem filmova, uključujući prilagođeni tip sadržaja, Gutenberg blok, kratki kod (shortcode), prilagođene REST API krajnje točke i responzivne elemente. 
+
+Funkcionalnosti uključuju:
+
+Prilagođeni tip sadržaja i taksonomije:
+Kreiran je prilagođeni tip sadržaja "Movie".
+Dodana je taksonomija "Genre" i povezana s tipom sadržaja "Movie".
+Implementirane su prilagođene stranice za prikaz (single i archive) s listanjem filmova i detaljima poput naslova, slike, žanra i opisa.
+
+Prilagođeni Gutenberg blok:
+Blok za prikaz omiljenih filmskih citata, dostupan samo za tip sadržaja "Movie".
+Polja uključuju citat, ime filma i autora.
+
+Kratki kod za listanje filmova:
+Omogućuje filtriranje filmova prema žanru i broju prikazanih stavki.
+
+Sekcija slidera:
+Kreirana je responzivna slider sekcija korištenjem biblioteke Swiper.js.
+
+Prilagođeni REST API endpoint i AJAX filtriranje:
+Na stranici arhive dodano je polje za odabir žanra koje poziva prilagođeni REST API putem AJAX-a za filtriranje filmova.
+URL se dinamički ažurira za prikaz filtriranih rezultata.
+
+Shortcodovi: 
+[movies_list] - prikaz liste filmova
+[movie_slider] - prikaz filmova u slideru
+
+Kompatibilnost:
+Radi na PHP verzijama 8.0+.

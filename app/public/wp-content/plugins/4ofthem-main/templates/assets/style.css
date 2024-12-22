@@ -1,0 +1,439 @@
+/* ======== Globalni stilovi ======== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* ======== Stilovi za archive-movie.php ======== */
+.movie-archive {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#genre-filter {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+
+/* kartice */ 
+
+#movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    max-width: 1200px;
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.movie-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 500px;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-thumbnail img {
+    width: 100%;
+    height: auto;
+    
+    object-fit: cover; /* Prilagodba slike */
+    max-width: 1200px;
+    max-height: 700px; /* Maksimalna veličina slika */
+}
+
+.movie-card h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.movie-card p {
+    padding: 0 15px 15px;
+    font-size: 1em;
+    color: #1a1919;
+    max-width: 70ch; /* Ograničenje duljine teksta */
+    white-space: normal; /* Prikaz teksta u više redova */
+    overflow: hidden; /* Skrivanje suvišnog sadržaja */
+    text-overflow: ellipsis;
+}
+
+
+/* Responzivnost */
+@media screen and (max-width: 768px) {
+    #movie-list {
+        grid-template-columns: 1fr; /* Prikaz jedne kartice po redu */
+        padding: 0 4px; /* Dodatni razmak lijevo i desno */
+    }
+    .movie-card {
+        margin: 4px auto; /* Dodatni razmak između kartica */
+    }
+}
+
+
+/* ======== Stilovi za movie-plugin.php ======== */
+.plugin-container {
+    padding: 20px;
+    background-color: #eef2f3;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* SHORTCODE */ 
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.movie-item {
+    background: #efefef;
+    border: solid 4px #717171;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.movie-thumbnail img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.movie-info {
+    margin-top: 10px;
+}
+
+.movie-title {
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+.movie-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.movie-button {
+    padding: 10px 20px; /* Ujednačena veličina gumbova */
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    min-width: 100px; /* Minimalna širina kako bi gumbi izgledali konzistentno */
+}
+
+.movie-button.trailer {
+    background: #d32f2f;
+}
+
+.movie-button.read-more {
+    background-color: #007bff;
+}
+
+.movie-button:hover {
+    opacity: 0.8;
+}
+
+.movie-description {
+    font-size: 14px;
+    color: #000000;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* SWIPER SEKCIJA*/ 
+
+.swiper-container {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #404040;
+}
+
+.slider-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.slider-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.8));
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.slider-poster img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.slider-info {
+    flex: 1;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slider-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.slider-description {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.slider-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.slider-time {
+    font-weight: bold;
+    color: #fff;
+}
+
+.slider-icons span {
+    margin-left: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+    color: #fff;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: 'prev';
+    color: #fff;
+}
+
+.slider-title {
+    color: #fff;
+}
+
+/* SINGLE TEMPLATE */ 
+
+/* Glavni kontejner */
+.movie-single {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header sekcija */
+.movie-single .movie-header {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.movie-single .movie-poster img {
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.movie-single .movie-video iframe {
+    width: 500px;
+    height: 300px;
+    border-radius: 8px;
+}
+
+/* Genre sekcija */
+.movie-single .movie-genres {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.movie-single .genre-tag {
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Detalji o filmu */
+.movie-single .movie-details p {
+    margin: 10px 0;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Responzivna pravila za manje ekrane */
+@media screen and (max-width: 768px) {
+    .movie-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .movie-poster img {
+        max-width: 100%;
+    }
+
+    .movie-excerpt {
+        text-align: center;
+    }
+
+    .movie-genres {
+        justify-content: center;
+    }
+}
+
+.movie-trailer .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #0073aa; /* WordPress plava */
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.movie-trailer .button:hover {
+    background-color: #005177;
+}
+
+.movie-quote {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.movie-item {
+    background:  #ececec;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.movie-thumbnail img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.movie-info {
+    margin-top: 10px;
+}
+
+.movie-rating {
+    font-size: 16px;
+    color: #fbc02d;
+}
+
+.movie-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.movie-button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+
+.movie-button.trailer {
+    background: #d32f2f;
+}
+
+.movie-button.watchlist {
+    background: #1976d2;
+}
+
+.movie-button:hover {
+    opacity: 0.8;
+}

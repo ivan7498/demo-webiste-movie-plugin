@@ -1,0 +1,20 @@
+# Log fajlovi
+logs/
+*.log
+
+# Konfiguracijske datoteke
+conf/
+*.env
+
+# WordPress cache i upload direktoriji
+app/wp-content/uploads/
+app/wp-content/cache/
+
+# Isključi temp fajlove
+*.tmp
+*.cache
+.DS_Store
+Thumbs.db
+
+# Git specifično
+.git/
